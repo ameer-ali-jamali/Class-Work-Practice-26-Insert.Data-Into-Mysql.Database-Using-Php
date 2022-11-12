@@ -1,27 +1,28 @@
 <?php
 $select = "SELECT * FROM tab ";
 $result = mysqli_query($conn, $select);
+
+echo "<table class='table table-sm table-dark table-hover'>";
+echo "<thead>";
+echo "<tr>";
+echo "<th scope='col'>ID</th>";
+echo "<th scope='col'>NAME</th>";
+echo "<th scope='col'>EMAIL</th>";
+echo "<th scope='col'>PASSWORD</th>";
+echo "</tr>";
+echo "</thead>";
+echo "<tbody>";
 echo "<hr>";
 while ($data = mysqli_fetch_assoc($result)) {
-    echo "<table class='table table-striped table-dark table-hover'>";
-    echo "<thead>";
-    echo "<tr>";
-    echo "<th scope='col'>ID</th>";
-    echo "<th scope='col'>NAME</th>";
-    echo "<th scope='col'>EMAIL</th>";
-    echo "<th scope='col'>PASSWORD</th>";
-    echo "</tr>";
-    echo "</thead>";
-    echo "<tbody>";
     echo "<tr>";
     echo "<th>$data[Id]</th>";
-    echo "<td>[Name]</td>";
-    echo "<td>[Email]</td>";
-    echo "<td>[Password]</td>";
+    echo "<td>$data[Name]</td>";
+    echo "<td>$data[Email]</td>";
+    echo "<td>$data[Password]</td>";
     echo "</tr>";
-    echo "</tbody>";
-    echo "</table>";
 }
+echo "</tbody>";
+echo "</table>";
 ?>
 <?php
 

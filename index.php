@@ -1,6 +1,32 @@
 <?php
-include_once "connection.php";
+try {
+    $conn = new mysqli("localhost", "root", "", "std");
+} catch (Exception $ex) {
+    echo $ex . "This is error";
+    die("Connection failed");
+}
+if (isset($_POST['submit'])) {
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+    if ($name == true and $email == true and $password == true) {
+        $insert = "INSERT INTO `tab`(`Name`, `Email`, `Password`) VALUES ('$name','$email','$password')";
+        $result = mysqli_query($conn, $insert);
+    } else {
+        echo "<h5 style='background-color: darkslategrey;color: red;'>Please Fill Registration Form</h5>";
+    }
+} else {
+    $name = $_POST['name'] == ;
+    $email = $_POST['email'] == ;
+    $password = $_POST['password'] == ;
+}
+
+$select = "SELECT * FROM tab ";
+$update = "UPDATE `tab` SET `Name`='Anwar',`Email`='anwar@gmail.com',`Password`='john22' WHERE Id=1";
+$delete = " DELETE FROM tab WHERE Name='Ameer_ali' and Email='email@j.com' and Password='amjad' ";
+
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,15 +37,14 @@ include_once "connection.php";
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body style="background-color:darkgray">
+    <div class="container-fluid">
 
-    <div class="container">
         <div class="row">
             <div class="col-6">
-                <form action="action_page.php" method="post">
+                <form action="index.php" method="post">
                     <h1>Student Portal</h1>
                     <div class="form-group">
                         <label for="fname">Name:</label>
@@ -38,7 +63,7 @@ include_once "connection.php";
                             <input class="form-check-input" type="checkbox"> Remember me
                         </label>
                     </div>
-                    <button type="submit" class="btn btn-primary">Sign-up</button>
+                    <button type="submit" class="btn btn-primary" name="submit">Sign-up</button>
                 </form>
             </div>
             <div class="col-6">
