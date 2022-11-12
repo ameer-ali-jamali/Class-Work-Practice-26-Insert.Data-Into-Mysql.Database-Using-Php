@@ -1,45 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
-<body>
-
-</body>
-
-</html>
-
 <?php
-
 
 try {
     $conn = new mysqli("localhost", "root", "", "std");
 } catch (Exception $ex) {
     echo $ex . "This is error";
-    // die("Connection failed");
-} finally {
-    echo "Finally";
+    die("Connection failed");
 }
-echo "Connected Sucsessfull";
+echo "Database Connected Sucsessfully";
 
 ?>
-
 <?php
 
-$email = $_GET['email'];
-$password = $_GET['password'];
-echo $email . $password;
+$name = $_POST['name'];
+$email = $_POST['email'];
+$password = $_POST['password'];
 
-// $insert_data = "INSERT INTO `tab`(`Name`, `Email`, `Password`) VALUES ('$namee','$emailll','$passwordd')";
-// $result = mysqli_query($conn, $insert_data);
-// if (!$result == "") {
-//     echo "Error";
-// } else ("Data Submited Succesfully");
+
+$update = "UPDATE `tab` SET `Name`='Anwar',`Email`='anwar@gmail.com',`Password`='john22' WHERE Id=1";
+$delete = " DELETE FROM tab WHERE Name='Ameer_ali' and Email='email@j.com' and Password='amjad' ";
+$insert_data = "INSERT INTO `tab`(`Name`, `Email`, `Password`) VALUES ('$name','$email','$password')";
+$result = mysqli_query($conn, $delete);
 
 
 ?>
