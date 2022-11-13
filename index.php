@@ -5,21 +5,21 @@ try {
     echo $ex . "This is error";
     die("Connection failed");
 }
-if (isset($_POST['submit'])) {
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $password = $_POST['password'];
-    if ($name == true and $email == true and $password == true) {
-        $insert = "INSERT INTO `tab`(`Name`, `Email`, `Password`) VALUES ('$name','$email','$password')";
-        $result = mysqli_query($conn, $insert);
-    } else {
-        echo "<h5 style='background-color: darkslategrey;color: red;'>Please Fill Registration Form</h5>";
-    }
-} else {
-    $name = $_POST['name'] == ;
-    $email = $_POST['email'] == ;
-    $password = $_POST['password'] == ;
-}
+
+// if (isset($_POST['submit'])) {
+//     $name = $_POST['name'];
+//     $email = $_POST['email'];
+//     $password = $_POST['password'];
+//     if ($name == true and $email == true and $password == true) {
+//         $insert = "INSERT INTO `tab`(`Name`, `Email`, `Password`) VALUES ('$name','$email','$password')";
+//         $result = mysqli_query($conn, $insert);
+//     } else {
+//         echo "<h5 style='background-color: darkslategrey;color: red;'>Please Fill Registration Form</h5>";
+//     }
+// }
+
+
+
 
 $select = "SELECT * FROM tab ";
 $update = "UPDATE `tab` SET `Name`='Anwar',`Email`='anwar@gmail.com',`Password`='john22' WHERE Id=1";
