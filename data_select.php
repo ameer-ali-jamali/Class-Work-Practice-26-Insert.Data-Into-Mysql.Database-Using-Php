@@ -12,7 +12,6 @@ echo "<th scope='col'>PASSWORD</th>";
 echo "</tr>";
 echo "</thead>";
 echo "<tbody>";
-echo "<hr>";
 while ($data = mysqli_fetch_assoc($result)) {
     echo "<tr>";
     echo "<th>$data[Id]</th>";
