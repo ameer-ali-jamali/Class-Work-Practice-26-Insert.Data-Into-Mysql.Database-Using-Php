@@ -13,17 +13,16 @@ if (isset($_POST['submit'])) {
     if ($name == true and $email == true and $password == true) {
         $insert = "INSERT INTO `tab`(`Name`, `Email`, `Password`) VALUES ('$name','$email','$password')";
         $result = mysqli_query($conn, $insert);
+        echo "<script>
+        alert('Thankyou Your Data Submited Successfully !!');
+        window.location = 'index.php';
+    </script>";
     } else {
-        echo "<h5 style='background-color: darkslategrey;color: red;'>Please Fill Registration Form</h5>";
+        echo "<script>
+        alert('Please Fill Registration Form !!');
+    </script>";
     }
 }
-
-
-
-
-$select = "SELECT * FROM tab ";
-$update = "UPDATE `tab` SET `Name`='Anwar',`Email`='anwar@gmail.com',`Password`='john22' WHERE Id=1";
-$delete = " DELETE FROM tab WHERE Name='Ameer_ali' and Email='email@j.com' and Password='amjad' ";
 
 ?>
 
