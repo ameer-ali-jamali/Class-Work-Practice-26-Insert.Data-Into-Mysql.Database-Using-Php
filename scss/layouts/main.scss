@@ -3,18 +3,20 @@
 }
 .signup-content {
     @extend display-flex;
-    padding: 75px 0;
+    padding: 4px 0 !important;
     // flex-flow: wrap;
+display: grid !important;
+place-items: center !important;
 }
 .signup-form, .signup-image, .signin-form, .signin-image{
-    width: 50%;
+    width: 75% !important;
     overflow: hidden;
 }
 .signup-image {
     margin: 0 55px;
 }
 .form-title {
-    margin-bottom: 33px;
+    margin-bottom:13px ;
 }
 .signup-image {
     margin-top: 45px;
@@ -25,11 +27,11 @@ figure {
 }
 .form-submit {
     display: inline-block;
-    background: $blue-color;
+    background:blue !important;
     color: #fff;
     border-bottom: none;
     width: auto;
-    padding: 15px 39px;
+    padding: 3px 4px !important;
     @include border-radius(5px);
     margin-top: 25px;
     cursor: pointer;
@@ -52,10 +54,9 @@ figure {
     font-size: 13px;
     color: $black-color;
 }
-.signup-form {
-    margin-left: 75px;
-    margin-right: 75px;
-    padding-left: 34px;
+
+.text-align{
+    text-align: center;
 }
 .register-form {
     width: 100%;
@@ -112,13 +113,13 @@ input[type=checkbox]:not(old) + label > span{
   background-image :         linear-gradient(rgb(255,255,255),rgb(255,255,255 ));
   vertical-align   : bottom;
 }
-input[type=checkbox]:not(old):checked + label > span,{
-    background-image :    -moz-linear-gradient(rgb(255,255,255),rgb(255,255,255));
-    background-image :     -ms-linear-gradient(rgb(255,255,255),rgb(255,255,255));
-    background-image :      -o-linear-gradient(rgb(255,255,255),rgb(255,255,255));
-    background-image : -webkit-linear-gradient(rgb(255,255,255),rgb(255,255,255));
-    background-image :         linear-gradient(rgb(255,255,255),rgb(255,255,255 ));
-}
+// input[type=checkbox]:not(old):checked + label > span,{
+//     background-image :    -moz-linear-gradient(rgb(255,255,255),rgb(255,255,255));
+//     background-image :     -ms-linear-gradient(rgb(255,255,255),rgb(255,255,255));
+//     background-image :      -o-linear-gradient(rgb(255,255,255),rgb(255,255,255));
+//     background-image : -webkit-linear-gradient(rgb(255,255,255),rgb(255,255,255));
+//     background-image :         linear-gradient(rgb(255,255,255),rgb(255,255,255 ));
+// }
 input[type=checkbox]:not(old):checked + label > span:before{
     content     : '\f26b';
     display     : block;

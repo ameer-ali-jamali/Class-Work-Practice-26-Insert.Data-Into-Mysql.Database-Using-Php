@@ -218,6 +218,11 @@ figure {
   margin: 0;
 }
 
+.d-grid {
+  display: grid !important;
+  gap: 15px !important;
+}
+
 p {
   margin-bottom: 0px;
   font-size: 15px;
@@ -266,6 +271,21 @@ body {
   -webkit-border-radius: 20px;
   -o-border-radius: 20px;
   -ms-border-radius: 20px;
+}
+
+.table-conatiner {
+  display: grid;
+  width: 100%;
+}
+
+.table-font-size {
+  font-size: smaller;
+}
+
+.table-heading {
+  font-size: revert;
+  text-align: center;
+  margin-top: 30px;
 }
 
 .display-flex {
@@ -327,7 +347,7 @@ body {
 }
 
 .form-title {
-  margin-bottom: 33px;
+  margin-bottom: 13px;
 }
 
 .signup-image {
@@ -373,12 +393,6 @@ figure {
 .term-service {
   font-size: 13px;
   color: #222;
-}
-
-.signup-form {
-  margin-left: 75px;
-  margin-right: 75px;
-  padding-left: 34px;
 }
 
 .register-form {
@@ -592,6 +606,7 @@ label.valid:after {
   text-decoration: none;
 }
 
+
 .socials li a i {
   width: 30px;
   height: 30px;
@@ -643,17 +658,32 @@ label.valid:after {
   margin-top: 10px;
 }
 
-.table-top {
-  margin-top: 81px !important;
-  color: cornflowerblue !important;
-}
+
+
 
 @media screen and (max-width: 1200px) {
   .container {
     width: calc(100% - 30px);
     max-width: 100%;
   }
+
 }
+
+@media screen and (max-width: 1024px) {
+  .col-6 {
+    object-fit: contain;
+    width: 90%;
+    display: grid;
+    place-items: center;
+  }
+
+  /* .row {
+    display: grid !important;
+    place-items: center !important;
+  } */
+
+}
+
 
 @media screen and (min-width: 1024px) {
   .container {
@@ -682,7 +712,7 @@ label.valid:after {
     margin-right: 0px;
     padding-left: 0px;
     /* box-sizing: border-box; */
-    padding: 0 30px;
+    padding: 0 0px;
   }
 
   .signin-image {
@@ -729,6 +759,8 @@ label.valid:after {
   .form-title {
     text-align: center;
   }
+
+
 }
 
 @media screen and (max-width: 400px) {
@@ -743,6 +775,20 @@ label.valid:after {
   .social-label {
     margin-right: 0px;
     margin-bottom: 10px;
+  }
+}
+
+@media screen and (min-width:700px) and (max-width:1200px) {
+  .col-6 {
+    flex: 0 0 auto;
+    width: 50% !important;
+  }
+}
+
+@media screen and (min-width:10px) and (max-width:700px) {
+  .col-6 {
+    flex: 0 0 auto;
+    width: 100% !important;
   }
 }
 
