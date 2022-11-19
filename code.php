@@ -58,15 +58,14 @@ if (isset($_POST['login'])) {
         $query = mysqli_query($conn, $sql);
         $row = mysqli_fetch_assoc($query);
         if ($row != null) {
-            echo "<script>
+            die("<script>
                 alert(' Wellcome =>  $row[name] ');
-                window.location = 'success.php';
-                </script>";
-            die();
+                window.location = 'success.html';
+                </script>");
         } else {
             echo "<script>
             alert('Incorrect Email or Password !!');
-            window.location = 'success.php';
+            window.location = 'index.php';
             </script>";
         }
     } else {

@@ -1,6 +1,3 @@
-<?php
-include_once "conn.php";
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,16 +6,18 @@ include_once "conn.php";
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        h1 {
+            text-align: center;
+            background-color: darkseagreen;
+            font-size: xxx-large;
+        }
+    </style>
+
 </head>
 
 <body>
-    <?php
-    $select = "SELECT * FROM tab ";
-    $result = mysqli_query($conn, $select);
-    $row = mysqli_fetch_assoc($result);
-    echo "<h1>$row[name]<h1>";
-    ?>
-
+    <h1>Wellcome</h1>
 </body>
 
 </html>
