@@ -23,6 +23,7 @@ include_once "conn-database.php";
 ?>
 
 <body>
+
     <div class="container-fluid">
         <div class="row">
             <div class="col-6">
@@ -57,8 +58,8 @@ include_once "conn-database.php";
                                 <div class="d-grid">
                                     <input type="submit" name="submit" id="signup" class="btn btn-primary p-2" value="Register" />
                                     <input type="submit" name="login" id="signin" class="btn btn-success p-2" value="login" />
-                                    <input type="submit" name="submit" id="update" class="btn btn-secondary p-2" value="Update" />
-                                    <input type="submit" name="submit" id="delete" class="btn btn-danger p-2" value="Delete" />
+                                    <input type="submit" name="update" id="update" class="btn btn-secondary p-2" value="Update" />
+                                    <input type="submit" name="delete" id="delete" class="btn btn-danger p-2" value="Delete" />
 
                                 </div>
                             </div>
@@ -67,12 +68,14 @@ include_once "conn-database.php";
                 </div>
             </div>
             <div class="col-6">
-                <!-- <?php
-                        include_once "get-data.php";
-                        ?> -->
+                <?php
+                include_once "get-data.php";
+                ?>
             </div>
+
         </div>
     </div>
+
 
 
 
