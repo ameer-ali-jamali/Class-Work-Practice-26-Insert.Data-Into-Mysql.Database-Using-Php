@@ -19,7 +19,8 @@
 </head>
 
 <?php
-include_once "conn-database.php";
+include_once "conn.php";
+include_once "code.php";
 ?>
 
 <body>
