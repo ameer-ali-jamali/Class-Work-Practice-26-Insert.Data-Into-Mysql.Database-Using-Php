@@ -9,7 +9,6 @@ echo "<tr>";
 echo "<th scope='col'>Id</th>";
 echo "<th scope='col'>Name</th>";
 echo "<th scope='col'>Email</th>";
-echo "<th scope='col'>Password</th>";
 echo "</tr>";
 echo "</thead>";
 echo "<tbody>";
@@ -18,7 +17,6 @@ while ($data = mysqli_fetch_assoc($result)) {
     echo "<th>$data[id]</th>";
     echo "<td>$data[name]</td>";
     echo "<td>$data[email]</td>";
-    echo "<td>$data[password]</td>";
     echo "</tr>";
 }
 echo "</tbody>";

@@ -114,30 +114,31 @@ if (isset($_POST['update'])) {
 
 if (isset($_POST['delete'])) {
     if ($_POST == true) {
-        $name = $_POST['name'];
         $email = $_POST['email'];
         $md5_pass = hash_pass($_POST['pass']);
-        if ($name && $email && $md5_pass == true) {
-            $delete = "DELETE FROM tab WHERE name='$name' and email='$email' and  password='$md5_pass'";
-            $result = mysqli_query($conn, $delete);
-            if ($result > 0) {
+        if ($email && $md5_pass == true) {
+            $sql = "SELECT * FROM `tab` WHERE email='$email' AND password='$md5_pass'";
+            $query = mysqli_query($conn, $sql);
+            $row = mysqli_num_rows($query);
+            if ($row == true) {
+                $query =  "DELETE FROM tab WHERE email='$email' AND password='$md5_pass' ";
+                $re = mysqli_query($conn, $query);
                 die("<script>
-            alert('Your Data Deleted Success fully  => ( $name = $email = $md5_pass ) !!');
+                alert('Your Data Deleted Success fully');
+                window.location = 'index.php';
+                </script>");
+            } else {
+                die("<script>
+            alert('Incorrect Email or Password !!');
             window.location = 'index.php';
             </script>");
             }
-            if ($result < 1) {
-                die("<script>
-            alert('Some Error Try Again Later !!');
-            window.location = 'index.php';
-            </script>");
-            }
-        } else {
-            die("<script>
-            alert('Please Fill This Form  => ( $name = $email = $md5_pass ) !!');
-            window.location = 'index.php';
-            </script>");
         }
+    } else {
+        die("<script>
+    alert('Empty Value');
+    window.location = 'index.php';
+    </script>");
     }
 }
 
