@@ -330,8 +330,10 @@ body {
 }
 
 .signup-content {
-  padding: 75px 0;
-
+  padding: 0px !important;
+  display: grid !important;
+  place-items: center !important;
+  width: 100% !important;
 }
 
 .signup-form,
