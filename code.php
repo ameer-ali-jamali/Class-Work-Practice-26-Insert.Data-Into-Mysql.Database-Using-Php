@@ -15,7 +15,7 @@ if (isset($_POST['submit'])) {
         $md5_pass = hash_pass($_POST['pass']);
         $md5_re_pass = hash_pass($_POST['re_pass']);
         if ($name && $email && $md5_pass == true && $md5_pass == $md5_re_pass) {
-            $query = "INSERT INTO `tab`(`name`, `email`, `password`, `re_password`) VALUES ('$name','$email','$md5_pass','$md5_re_pass')";
+            $query = "INSERT INTO `tab`(`name`, `email`, `pass`, `re_pass`) VALUES ('$name','$email','$md5_pass','$md5_re_pass')";
             try {
                 $result = mysqli_query($conn, $query);
             } catch (Exception $ex) {
@@ -54,7 +54,7 @@ if (isset($_POST['login'])) {
     $email = $_POST['email'];
     $md5_pass = hash_pass($_POST['pass']);
     if ($email and $md5_pass == true) {
-        $sql = "SELECT * FROM `tab` WHERE email='$email' AND password='$md5_pass'";
+        $sql = "SELECT * FROM `tab` WHERE email='$email' AND pass='$md5_pass'";
         $query = mysqli_query($conn, $sql);
         $row = mysqli_fetch_assoc($query);
         if ($row != null) {
@@ -84,7 +84,7 @@ if (isset($_POST['update'])) {
     $email = $_POST['email'];
     $md5_pass = hash_pass($_POST['pass']);
     if ($name and $email and $md5_pass == true) {
-        $sql = "SELECT * FROM `tab` WHERE email='$email' AND password='$md5_pass'";
+        $sql = "SELECT * FROM `tab` WHERE email='$email' AND pass='$md5_pass'";
         $query = mysqli_query($conn, $sql);
         $row = mysqli_fetch_assoc($query);
         if ($row != null) {
@@ -117,11 +117,11 @@ if (isset($_POST['delete'])) {
         $email = $_POST['email'];
         $md5_pass = hash_pass($_POST['pass']);
         if ($email && $md5_pass == true) {
-            $sql = "SELECT * FROM `tab` WHERE email='$email' AND password='$md5_pass'";
+            $sql = "SELECT * FROM `tab` WHERE email='$email' AND pass='$md5_pass'";
             $query = mysqli_query($conn, $sql);
             $row = mysqli_num_rows($query);
             if ($row == true) {
-                $query =  "DELETE FROM tab WHERE email='$email' AND password='$md5_pass' ";
+                $query =  "DELETE FROM tab WHERE email='$email' AND pass='$md5_pass' ";
                 $re = mysqli_query($conn, $query);
                 die("<script>
                 alert('Your Data Deleted Success fully');
@@ -141,11 +141,6 @@ if (isset($_POST['delete'])) {
     </script>");
     }
 }
-
-
-
-
-
 
 
 
