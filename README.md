@@ -1,2 +1,3 @@
 # Send form data into database
-I created one registration form which will send data into database but in this form so many mistakes i have to create a new form submit code wihch will work with easily functions .. 
+I created one registration form which will send data into database This form works Great ..
+But i need improvements so i have to make other one with some improvements...
