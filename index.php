@@ -11,8 +11,11 @@
     <!-- Main css -->
     <link rel="stylesheet" href="css/style.css">
     <!-- Bootstrap Css -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
+    </script>
 
 
 </head>
@@ -56,10 +59,14 @@ include_once "code.php";
 
                             <div class="form-group form-button">
                                 <div class="d-grid">
-                                    <input type="submit" name="submit" id="signup" class="btn btn-primary p-2" value="Register" />
-                                    <input type="submit" name="login" id="signin" class="btn btn-success p-2" value="login" />
-                                    <input type="submit" name="update" id="update" class="btn btn-secondary p-2" value="Update" />
-                                    <input type="submit" name="delete" id="delete" class="btn btn-danger p-2" value="Delete" />
+                                    <input type="submit" name="submit" id="signup" class="btn btn-primary p-2"
+                                        value="Register" />
+                                    <input type="submit" name="login" id="signin" class="btn btn-success p-2"
+                                        value="login" />
+                                    <input type="submit" name="update" id="update" class="btn btn-secondary p-2"
+                                        value="Update" />
+                                    <input type="submit" name="delete" id="delete" class="btn btn-danger p-2"
+                                        value="Delete" />
 
                                 </div>
                             </div>
